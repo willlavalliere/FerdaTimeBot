@@ -1,5 +1,6 @@
 import discord
 from ferda_time_translator.translator import *
+import os
 
 
 class FerdaTimeBot(discord.Client):
@@ -36,4 +37,4 @@ intents.message_content = True
 
 client = FerdaTimeBot(intents=intents)
 
-client.run('MTA0OTg4OTEyMzY0Njg0NTAzMA.G1fsiQ.GMX4H34m7mGKazjedtNCyFaoXRNNvmiBYexYIM')
+client.run(os.environ['DISCORD_BOT_TOKEN'])
